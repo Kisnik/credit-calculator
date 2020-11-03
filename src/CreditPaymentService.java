@@ -3,12 +3,12 @@ public class CreditPaymentService {
        int payment = 0;
 
        //процентная ставка на 1 месяц
-        double percent_m = percent/12;
+        double percentm = percent/12;
         //вспомогательное вычисление для формулы расчета платежа
-        double tmp = Math.pow(1+percent_m, month)-1;
+        double tmp = Math.pow(1+percentm, month)-1;
 
         //расчет платежа
-        payment = (int) (total*(percent_m+percent_m/tmp));
+        payment = (int) (total*(percentm+percentm/tmp));
 
 
        return payment;
